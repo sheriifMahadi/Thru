@@ -1,0 +1,54 @@
+{
+  "network": "2:a96ba8750c59bd2d90d04941d65c042005e641e61c52518c0961960c71dfd876",
+  "successes": [
+    {
+      "operation": "create",
+      "signature": "tszo4t9xYyBDFZKYiRU73ospbqP2AN5oa7cuib7xBSFNVFdorlaf8XoyMbNUdQiN4nhwhfG0vdRuTBjxPRdf5DDB34",
+      "slot": "401550",
+      "compute": 8792,
+      "oldValue": "0",
+      "newValue": "0",
+      "abiDecoded": true
+    },
+    {
+      "operation": "increment-1",
+      "signature": "tsLjS_RZ52WKxaezI41_doFzyUb35beC088_uJamCxBmNFrCwxAIma3BeI-jMftmDZV9k-_145QJX4baETcxqRAByV",
+      "slot": "401571",
+      "compute": 8683,
+      "oldValue": "0",
+      "newValue": "1",
+      "abiDecoded": true
+    },
+    {
+      "operation": "increment-2",
+      "signature": "tspj5Q6BTOD93fMFRO8a8VVidDtDSuP6xuUBg24Ut7n-GeM1dO_jzNA_nBLQ-wW-lBqdYEiVcgH66XUM9nX1jKDx1s",
+      "slot": "401575",
+      "compute": 8683,
+      "oldValue": "1",
+      "newValue": "2",
+      "abiDecoded": true
+    }
+  ],
+  "failure": {
+    "signature": "tsrcRrW1k-Mr2pwCpaL0un9jiwZC7K2JCgV6m2iFSmwlkYfFEUZDjDBnH09GxUcFzKyyAtlGmV4m1_9TliOFcaDR4r",
+    "slot": "401604",
+    "code": "2001"
+  },
+  "finalCounterValue": "2",
+  "deploymentDate": "2026-10-05",
+  "rpcUrl": "https://rpc.betanet.thru.org",
+  "seed": "simple_counter_v1",
+  "program": "taKurxpTqC8_VCJRmkTaFalCF7eHfjb2lUYQirDyg2Nshn",
+  "programMeta": "taknKZ4n5YABXbZqjELQsz3VJT9752DARZ7W8xsT_JiwVu",
+  "counterSeed": "counter_demo_v1",
+  "counterAccount": "tabNrmmdR-mz3cGCf4_kTWmjKhB1Iwnf62Ke_l1ueEdBYp",
+  "abiAddress": "taoV_FP4Qgcplby56IWzT8eGjY8enNbtekXk6lp4_gMiaR",
+  "abiMeta": "ta4o30-J5YNWXky5vcR-90cv__YxF5A67nDrVc3VhZMd1r",
+  "walletAlias": "default",
+  "walletAddress": "taqBS7RVPQUqvPFmAABhOPIVhZB8yT5jgxmwxgUdesqmI3",
+  "observedWalletBalanceAfterTests": "992",
+  "binarySha256": "d51679dbfb7cf6835474a4cab58ab93df612391239d96b3669585c576a04f0ef",
+  "abiSha256": "1e5edccbfeb4fbdcfe10b7f80a0d8cf9c8f08b8aea939742047b6bb902c2c903",
+  "programCreationTransaction": "tsLFWV0rVfx1n4NXDlD_YiN7qHLK1K2-Paiob6O7m7PZ31_b6t9FgWwNSBTLAAPsi68w1Cp8uWmVcBhze_XsoQCiIV",
+  "abiCreationTransaction": "tsBUI-advn33bjDOm80LcSbjvSDKAvKCgA43Vpw2J1l9mwrZutY6leLvfuo-UuvscRuegt5eXTbLXataWmioy-ByNS"
+}
