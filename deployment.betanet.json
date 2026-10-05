@@ -1,0 +1,31 @@
+{
+  "network": "2:a96ba8750c59bd2d90d04941d65c042005e641e61c52518c0961960c71dfd876",
+  "program": "tarAIyY9FrL_xs1qemQOGYpoDQYg3j4pQKjxEVyehMkWZj",
+  "programId": "5198370b-cd86-4ec3-adb3-6bda9964d9be",
+  "historyUrl": "http://127.0.0.1:3001/programs/5198370b-cd86-4ec3-adb3-6bda9964d9be",
+  "detailUrl": "http://127.0.0.1:3001/transactions/tsEi9iLZNh0xS6PlWLXwLwrvEZ7hzLnD131Y1_pX6_4H-vzTRHYLQ253_1WWXW0h4qrB8jGdHTL3MSENkk7yPRAx5v?network=2%3Aa96ba8750c59bd2d90d04941d65c042005e641e61c52518c0961960c71dfd876",
+  "success": {
+    "signature": "tsEi9iLZNh0xS6PlWLXwLwrvEZ7hzLnD131Y1_pX6_4H-vzTRHYLQ253_1WWXW0h4qrB8jGdHTL3MSENkk7yPRAx5v",
+    "slot": "383275",
+    "compute": 5331,
+    "digest": "aa55c9432ebd78a8d91b335016413e65eeabbbe09cfc2f744abe48721cf74efa"
+  },
+  "failure": {
+    "signature": "tsRMNpoMRavdLjQMrDzKmuCKkRZG8gf4_GbrNSPx0F4RK0SiTKAL7yw5HKMP_-9q_BvXYT-RRjnwksgDRF6XekBSC5",
+    "slot": "383315",
+    "code": "1001"
+  },
+  "abiDecoded": true,
+  "deploymentDate": "2026-10-05",
+  "rpcUrl": "https://rpc.betanet.thru.org",
+  "seed": "document_receipt_v1",
+  "walletAlias": "default",
+  "walletAddress": "taqBS7RVPQUqvPFmAABhOPIVhZB8yT5jgxmwxgUdesqmI3",
+  "programMeta": "ta1US2nudmCZZjMHBZ8081C814FeGdteWMwDhC45oCD8bD",
+  "abiAddress": "ta6Vm5Fu7NwFmgaUt62vNNCFg8r0XYMvIDf1ebnm5pyQ8a",
+  "abiMeta": "tazca3pPRaa7SCwg3cjJZDrR7lBx4nBfVMxr4gEfxbcAOu",
+  "binarySha256": "f3f5f2c5514c93d5e6186b0ee298d59eb873c08d62a3b1cec05b3f499cff1a32",
+  "abiSha256": "78565dbb605f0dec7831c1fb1bfd85f0a66d53717cfff026dc818f58182c4a49",
+  "programCreationTransaction": "tsxNvGOZ2XUSfvBfldSQ5PhMN_IWhatfFIJg9wQnLcqHcuJ5USflq-Ar38LmEka9XJV9_5ulvrRE9qhoAFbBGUBB16",
+  "abiCreationTransaction": "ts2fN5r3LRASjnts_WGUcmKyshyzEsWxeNL7ay1pi4rfLtt_2uRvZ7RrDpIUENDb2wVD8kutteYpQQpWTO6BWlCSAi"
+}

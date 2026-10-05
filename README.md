@@ -72,14 +72,18 @@ zero bytes, and repeated calls. It also checks the SHA-256 helper against a know
 vector and round-trips the emitted fixture through both ABI roots with the CLI.
 These are local tests, not full VM or network integration tests.
 
-Implemented and locally tested; **not deployed**, no signing or chain writes have
-been performed. No wallet or document contents are stored in this repository.
+Deployed and verified on **BetaNet, October 5, 2026**. Public deployment details
+and test transaction references are in `deployment.betanet.json`. No private keys
+or document contents are stored in this repository.
 
-## Next: BetaNet deployment and dashboard test
+## Completed BetaNet deployment and dashboard test
 
-Needed: the alias of an existing locally configured BetaNet signing wallet and
-enough BetaNet balance for program/ABI creation and test transactions. Private
-keys stay in the local CLI configuration and must not be pasted into chat.
+Used the existing `default` signing wallet. Its account was missing on BetaNet,
+so it was registered using the existing key and funded with 1,000 faucet test units.
+The observed balance after deployment and both tests was 998. The key stayed in
+the local CLI configuration. The raw `.bin` passed normal CLI validation and was
+deployed; the CLI rejects the `.elf` container before upload. No validation bypass
+was used. The ABI is published and remains upgradeable.
 
 Deployment sequence:
 
@@ -91,3 +95,21 @@ Deployment sequence:
 6. Verify the receipt event, instruction decoding, stored history, and error 1001.
 
 The dashboard and original hello-world program remain separate sibling projects.
+
+Verified results:
+
+- Program: `tarAIyY9FrL_xs1qemQOGYpoDQYg3j4pQKjxEVyehMkWZj`.
+- SHA-256 of `My first receipt`: successful execution at slot 383275, 5,331 compute
+  units, one 32-byte event matching the input byte-for-byte.
+- One-byte input `00`: VM revert at slot 383315, program error 1001.
+- Both the successful instruction and event decoded using the historical on-chain ABI.
+- Both executions collected through normal two-pass range collection into PostgreSQL.
+- Stored execution HTTP page returned 200 and displayed `document_sha256`.
+- Temporary program uploader accounts were cleaned up by the deployment CLI.
+
+Open [stored history](http://127.0.0.1:3001/programs/5198370b-cd86-4ec3-adb3-6bda9964d9be)
+or [error analytics](http://127.0.0.1:3001/programs/5198370b-cd86-4ec3-adb3-6bda9964d9be/errors).
+The 50% failure rate from these two test calls is intentional test data, not a
+reliability assessment. Collection was run for these test ranges; start the
+separate dashboard worker for ongoing collection. Existing programs' pause
+settings were not changed.
