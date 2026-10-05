@@ -113,3 +113,22 @@ The 50% failure rate from these two test calls is intentional test data, not a
 reliability assessment. Collection was run for these test ranges; start the
 separate dashboard worker for ongoing collection. Existing programs' pause
 settings were not changed.
+
+## Companion program and GitHub
+
+The next example, `simple-counter`, is a sibling under `/home/vanity/thru-projects`
+with its own Git repository. It demonstrates persistent state and old/new-value
+events; Document receipt demonstrates submitting and recording a document hash.
+Both programs are deployed on BetaNet, with public deployment records in their
+respective `deployment.betanet.json` files.
+
+To publish this repository, create an empty GitHub repository and use its URL:
+
+```bash
+cd /home/vanity/thru-projects/document-receipt
+git remote add origin https://github.com/YOUR_USERNAME/document-receipt.git
+git push -u origin main
+```
+
+Push `simple-counter` separately from its own folder. Build artifacts and temporary
+logs stay ignored; no wallet key is needed in either repository.
