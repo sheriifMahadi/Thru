@@ -43,8 +43,8 @@ git push -u origin main
 
 Both programs are ordinary subdirectories, not nested repositories or submodules.
 Their original Git histories are retained through subtree imports. Use this root
-for future commits and pushes. The previous standalone project folders are left
-in place as backups; changes made there will not automatically appear here.
+for future commits and pushes. The redundant standalone project folders have
+been removed; both programs now live only in this shared repository.
 
 Build output, temporary logs, and local environment files are ignored. Wallet
 keys stay in the local THRU CLI configuration and must not be committed.
