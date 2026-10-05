@@ -1,0 +1,129 @@
+{
+  "abi": {
+    "package": "demo.simple_counter",
+    "name": "Simple counter",
+    "abi-version": 1,
+    "package-version": "1.0.0",
+    "description": "Public persistent counter. Operation 0 creates; 1 increments.",
+    "options": {
+      "program-metadata": {
+        "root-types": {
+          "instruction-root": "CounterInstruction",
+          "events": "CounterChanged"
+        }
+      }
+    }
+  },
+  "types": [
+    {
+      "name": "CounterInstruction",
+      "kind": {
+        "struct": {
+          "packed": true,
+          "fields": [
+            {
+              "name": "operation",
+              "field-type": {
+                "primitive": "u8"
+              }
+            },
+            {
+              "name": "account_index",
+              "field-type": {
+                "primitive": "u16"
+              }
+            },
+            {
+              "name": "seed",
+              "field-type": {
+                "array": {
+                  "size": {
+                    "literal": {
+                      "u64": 32
+                    }
+                  },
+                  "element-type": {
+                    "primitive": "u8"
+                  }
+                }
+              }
+            },
+            {
+              "name": "proof_size",
+              "field-type": {
+                "primitive": "u32"
+              }
+            },
+            {
+              "name": "proof",
+              "field-type": {
+                "array": {
+                  "size": {
+                    "field-ref": {
+                      "path": [
+                        "proof_size"
+                      ]
+                    }
+                  },
+                  "element-type": {
+                    "primitive": "u8"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "CounterChanged",
+      "kind": {
+        "struct": {
+          "packed": true,
+          "fields": [
+            {
+              "name": "operation",
+              "field-type": {
+                "primitive": "u8"
+              }
+            },
+            {
+              "name": "old_value",
+              "field-type": {
+                "primitive": "u64"
+              }
+            },
+            {
+              "name": "new_value",
+              "field-type": {
+                "primitive": "u64"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "CounterState",
+      "kind": {
+        "struct": {
+          "packed": true,
+          "fields": [
+            {
+              "name": "tag",
+              "field-type": {
+                "primitive": "u64"
+              }
+            },
+            {
+              "name": "value",
+              "field-type": {
+                "primitive": "u64"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
