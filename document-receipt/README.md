@@ -16,7 +16,7 @@ Uses the installed THRU C SDK and RISC-V toolchain. Local checks additionally ne
 a host C compiler (`cc`), Python 3.11+, and the THRU CLI for ABI reflection.
 
 ```bash
-cd /home/vanity/thru-projects/document-receipt
+cd /home/vanity/thru-projects/thru-programs/document-receipt
 make
 make test
 ```
@@ -116,19 +116,9 @@ settings were not changed.
 
 ## Companion program and GitHub
 
-The next example, `simple-counter`, is a sibling under `/home/vanity/thru-projects`
-with its own Git repository. It demonstrates persistent state and old/new-value
-events; Document receipt demonstrates submitting and recording a document hash.
-Both programs are deployed on BetaNet, with public deployment records in their
-respective `deployment.betanet.json` files.
+[Simple counter](../simple-counter/) is the other program in this repository.
+It demonstrates persistent state and old/new-value events. Both programs have
+public deployment records in their respective `deployment.betanet.json` files.
 
-To publish this repository, create an empty GitHub repository and use its URL:
-
-```bash
-cd /home/vanity/thru-projects/document-receipt
-git remote add origin https://github.com/YOUR_USERNAME/document-receipt.git
-git push -u origin main
-```
-
-Push `simple-counter` separately from its own folder. Build artifacts and temporary
-logs stay ignored; no wallet key is needed in either repository.
+Commit and push both programs together from the repository root. See the
+[root README](../README.md) for GitHub setup instructions.

@@ -5,8 +5,8 @@ zero, then increment it one at a time. Each successful operation emits the old
 and new values. Anyone may increment a counter; this counts calls, not unique
 people. No reset or decrement operation is provided.
 
-This is a sibling of `document-receipt` under `/home/vanity/thru-projects`, with its
-own Git repository. Document receipt demonstrates events; this program also
+This shares a repository with [Document receipt](../document-receipt/).
+Document receipt demonstrates events; this program also
 shows persistent state. Both can be inspected in ThruLens.
 
 ## Build and test
@@ -15,7 +15,7 @@ Requires the THRU C SDK and RISC-V toolchain already installed under `~/.thru/sd
 plus `cc`, Python 3, and the THRU CLI for local tests.
 
 ```bash
-cd /home/vanity/thru-projects/simple-counter
+cd /home/vanity/thru-projects/thru-programs/simple-counter
 make
 make test
 ```
@@ -90,18 +90,9 @@ round-trip increment, dynamic creation proofs, and events through the ABI.
 
 ## GitHub
 
-Build files and transient logs are ignored. Commit source, tests, ABI, README, and
-public deployment records; keep wallet keys in your local THRU CLI configuration.
-To push, create an empty GitHub repository and use its URL:
-
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/simple-counter.git
-git push -u origin main
-```
-
-Document receipt is a separate repository in `../document-receipt`; push it to its
-own GitHub repository. Neither repository needs ThruLens running to build or call
-the deployed programs.
+Commit and push both programs from the repository root. See the
+[root README](../README.md) for instructions. Build files and transient logs are
+ignored; wallet keys stay in the local THRU CLI configuration.
 
 ## Deployed BetaNet demo
 
