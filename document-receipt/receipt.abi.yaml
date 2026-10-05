@@ -1,0 +1,39 @@
+abi:
+  package: demo.document_receipt
+  name: Document receipt
+  abi-version: 1
+  package-version: "1.0.0"
+  description: Receipt of a submitted SHA-256 digest; no ownership or content verification.
+  options:
+    program-metadata:
+      root-types:
+        instruction-root: SubmitReceipt
+        events: ReceiptRecorded
+
+types:
+  - name: SubmitReceipt
+    kind:
+      struct:
+        packed: true
+        fields:
+          - name: document_sha256
+            field-type:
+              array:
+                size:
+                  literal:
+                    u64: 32
+                element-type:
+                  primitive: u8
+  - name: ReceiptRecorded
+    kind:
+      struct:
+        packed: true
+        fields:
+          - name: document_sha256
+            field-type:
+              array:
+                size:
+                  literal:
+                    u64: 32
+                element-type:
+                  primitive: u8
